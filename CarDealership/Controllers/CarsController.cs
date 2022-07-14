@@ -7,9 +7,16 @@ namespace CarDealership.Controllers
   {
     [HttpGet("/cars")]
     public ActionResult Index() { return View(); }
-    // example route below:
-    // [Route("/")]
-    // public string Letter() { return "Our virtual postcard will go here soon!"; }
 
+    [HttpGet("/add")]
+    public ActionResult AddCar() { return View(); }
+
+    [HttpPost("/cars")]
+    public ActionResult Index() {
+    //stuff to make new car;
+    return RedirectToAction("Index");
+    }
+    
   }
+
 }
