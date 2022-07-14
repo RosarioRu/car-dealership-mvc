@@ -27,6 +27,20 @@ namespace CarDealership.Tests
       Assert.AreEqual(thisCarMakeModel, result);
     }
 
+    [TestMethod]
+    public void SetMakeModel_SetsMakeModel_String()
+    {
+      //arrange
+      string thisOnesMakeModel = "Toyota Sienna";
+      Car newCar = new Car(thisOnesMakeModel, 6500, 89000);
+      //act
+      string changeMakeModelTo = "Toyota Sienna SE";
+      newCar.MakeModel = changeMakeModelTo;
+      string result = newCar.MakeModel;
+      //assert
+      Assert.AreEqual(changeMakeModelTo, result);
+    }
+
 
 
 
