@@ -12,7 +12,7 @@ namespace CarDealership.Controllers
     public ActionResult AddCar() { return View(); }
 
     [HttpPost("/cars")]
-    public ActionResult Index() {
+    public ActionResult Add() {
     //stuff to make new car;
     return RedirectToAction("Index");
     }
