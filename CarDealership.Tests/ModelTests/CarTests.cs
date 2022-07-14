@@ -15,13 +15,20 @@ namespace CarDealership.Tests
       Assert.AreEqual(typeof(Car), newCar.GetType());
     }
 
-  //example test below:
-  //  [TestMethod]
-  //   public void ItemConstructor_CreatesInstanceOfItem_Item()
-  //   {
-  //     Item newItem = new Item("test");
-  //     Assert.AreEqual(typeof(Item), newItem.GetType());
-  //   }
+    [TestMethod] //second test
+    public void GetMakeModel_ReturnsMakeModel_String()
+    {
+      //arange
+      string thisCarMakeModel = "Honda Civic";
+      //act
+      Car newCar = new Car(thisCarMakeModel, 5000, 60000);
+      string result = newCar.MakeModel;
+      //assert
+      Assert.AreEqual(thisCarMakeModel, result);
+    }
+
+
+
 
   }
 }
