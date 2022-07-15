@@ -17,9 +17,10 @@ namespace CarDealership.Controllers
     public ActionResult AddCar() { return View(); }
 
     [HttpPost("/cars")]
-    public ActionResult Add() {
-    //stuff to make new car;
-    return RedirectToAction("Index");
+    public ActionResult Add(string makeModel, int price, int milage) 
+    {
+      Car carToAdd = new Car(makeModel, price, milage);
+      return RedirectToAction("Index");
     }
     
   }
