@@ -41,6 +41,17 @@ namespace CarDealership.Tests
       Assert.AreEqual(changeMakeModelTo, result);
     }
 
+    [TestMethod]
+    public void ListAllCars_ReturnsEmptyList_CarsList()
+    {
+      //arrange
+      List<Car> newList = new List<Car> {};
+      //act
+      List<Car> instanceList = Car.ListAllCars();
+      //assert
+      Assert.AreEqual(newList, instanceList);
+    }
+
 
 
 
