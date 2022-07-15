@@ -1,12 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
 using CarDealership.Models;
+using System.Collections.Generic; 
+
 
 namespace CarDealership.Controllers
 {
   public class CarsController : Controller
   {
     [HttpGet("/cars")]
-    public ActionResult Index() { return View(); }
+    public ActionResult Index() 
+    { 
+      List<Car> carsAvailable = Car.ListAllCars();
+      return View(carsAvailable); }
 
     [HttpGet("/add")]
     public ActionResult AddCar() { return View(); }
