@@ -6,8 +6,13 @@ using System;
 namespace CarDealership.Tests
 {
   [TestClass]
-  public class CarTests 
+  public class CarTests : IDisposable
   {
+    public void Dispose()
+    { 
+      Car.ClearAll();
+    }
+
     [TestMethod] //first test
     public void CarConstructor_CreatesAnInstanceOfCar_Car()
     {

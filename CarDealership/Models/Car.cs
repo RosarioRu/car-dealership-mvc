@@ -28,6 +28,12 @@ namespace CarDealership.Models
     {
       return _instancesOfCars;
     }
+    
+    //public method to clear lists
+    public static void ClearAll()
+    {
+      _instancesOfCars.Clear();
+    }
 
 
   }
