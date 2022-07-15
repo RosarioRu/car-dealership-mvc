@@ -54,7 +54,7 @@ namespace CarDealership.Tests
       //act
       List<Car> instanceList = Car.ListAllCars();
       //assert
-      Assert.AreEqual(newList, instanceList);
+      CollectionAssert.AreEqual(newList, instanceList);
     }
 
 
