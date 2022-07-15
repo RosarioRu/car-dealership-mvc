@@ -8,11 +8,23 @@
 </head>
 
 <body>
+  @using CarDealership.Models;
+
   <h1>Available Vehicles</h1>
-  <ul>List of vehicles goes here!
-    <li></li>
-    <li></li>
+
+  @if (Model.Count == 0)
+  {
+    <p>Sorry, there are no available vehicles at this time. Check again soon!</p>
+  }
+ else {
+  <ul>
+    @foreach (Car car in Model)
+    {
+      <li>@car.MakeModel</li>
+    }
   </ul>
+ }
+  
   <br><a href='/add'>Add to inventory</a>
 
 
