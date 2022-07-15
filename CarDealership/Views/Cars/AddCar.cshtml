@@ -6,11 +6,16 @@
   <title>Manage Inventory</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
-
- <body>
+  <body>
+    <h5>VEHICLE ENTRY FORM</h5>
     <form action="/cars" method="post">
-     <p>form label and inputs go here!</p>
-      <button type="submit">Submit</button>
+      <br><label for="makeModel">Make and Model:</label>
+      <input id="makeModel" name="makeModel" type="text"><br>
+      <br><label for="milage">Vehicle's Milage:</label>
+      <input id="milage" name="milage" type="number"><br>
+      <br><label for="price">Cost of Vehicle</label>
+      <input id="price" name="price" type="number"><br>
+      <br><button type="submit">Add to Inventory</button>
     </form>
   </body>
 </html>
